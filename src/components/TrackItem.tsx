@@ -2,7 +2,7 @@ import { Button, Card, IconButton } from "@material-ui/core";
 import { ITrack } from "../types/track";
 import "./TrackItem.css";
 import { Pause, PlayArrow , Delete} from "@material-ui/icons";
-
+import { useActions } from "../hooks/useActions";
 import { Link} from "react-router-dom";
 interface TrackList {
     track:ITrack;
@@ -11,13 +11,18 @@ interface TrackList {
 }
 
 function TrackItem({track,active = false}:TrackList){
-    
+    const {playTrack, pauseTrack, setActiveTrack} = useActions()
+    const play = (e) => {
+        
+        setActiveTrack(track)
+        playTrack()
+    }
     return(
         
         <Card className="wrapper"  >
             
             <div className="tracks__title">
-            <IconButton>
+            <IconButton onClick={play}>
             {active ? <Pause/> : <PlayArrow/> 
 
             }
