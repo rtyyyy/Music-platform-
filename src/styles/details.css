@@ -1,0 +1,23 @@
+.track__info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.track__title{
+    margin-left: 100px;
+    
+}
+
+button{
+    
+    width: 80px;
+    border: none;
+    font-size: 20px;
+    border-radius: 2px;
+}
+.track__description{
+    margin-left: 20%;
+    margin-right: 20%;
+}

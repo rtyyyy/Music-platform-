@@ -1,0 +1,23 @@
+.main__container{
+    margin-top: 100px;
+    justify-content: center;
+   
+}
+.card{
+    height: 100px;
+    width: 900px;
+}
+.container{
+    justify-content: space-between;
+    
+}
+.title{
+    position: relative;
+    top: -50px;
+
+}
+Button{
+    position: relative;
+    top: 5px;
+    height: 60px;
+}

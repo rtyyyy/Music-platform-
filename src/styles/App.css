@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  
+  height: 51px;
+  width: 100%;
+  background: linear-gradient(90deg, #6a04f0 0%, #d306c9 100%);
+  position: fixed;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  top: -1px;
+}
+main {
+  padding: 50px;
+}
+p {
+  margin: 20px;
+}
+.burger-btn {
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.burger-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  background: rgba(77, 3, 3, 0.575);
+  height: 2px;
+}
+.burger-btn span {
+  position: absolute;
+  top: 9px;
+  width: 20px;
+  background: rgba(77, 3, 3, 0.575);
+  height: 2px;
+}
+.burger-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  background: rgba(77, 3, 3, 0.575);
+  height: 2px;
+}
