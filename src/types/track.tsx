@@ -11,6 +11,6 @@ export interface ITrack{
     text: string;
     listens:number;
     audio:string;
-    img: any;
+    img: string;
     comments:IComment[]
 }

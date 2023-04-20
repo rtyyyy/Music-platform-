@@ -37,7 +37,7 @@ function TrackItem({track,active = false}:TrackList){
 
         {/* route to certain track by id */}
             
-            <Link to="/tracks/loading/:trackId" >инфо</Link>                                      
+            <Link to={`/tracks/loading/:${track._id}/:${track.name}/:${track.artist}/:${track.listens}/:${track.text}`} >инфо</Link>                                      
             </Button>
             <button className="delete__button"><Delete/></button>
             </div>
