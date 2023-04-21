@@ -34,9 +34,9 @@ function TrackInfo(){
         <TextField label='комментарий' fullWidth multiline rows={4}/>
         <Button>отправить</Button>
         <div>
-            {/* {track.comments.map(comment =>
+            {/* {track.comments.map(comments =>
             <div>
-                <div>автор - {comment.username}</div>
+                <div>автор - {comments.username}</div>
                 <div>автор - {text}</div>
             </div>
             )} */}

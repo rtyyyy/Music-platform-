@@ -13,7 +13,7 @@ interface TrackList {
 function TrackItem({track,active = false}:TrackList){
     const {playTrack, pauseTrack, setActiveTrack} = useActions()
     const play = (e) => {
-        
+        e.stopPropagation()
         setActiveTrack(track)
         playTrack()
     }
