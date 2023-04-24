@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import Menu from "./components/Menu";
 import Loading from "./Tracks";
-import  Playlists  from "./Playlists";
+import  Playlists  from "./components/Playlists/Playlists";
 import "./styles/App.css";
 import { ITrack } from "./types/track";
+import Home from "./components/Home/home";
+import Authorization from "./components/Authorization/authorization";
 
 import TrackTitle from "./loading--tracks/loadTitle";
 import TrackInfo from "./components/TrackInfo";
@@ -14,8 +16,8 @@ function App() {
   
   const tracks = [
     {_id:'1', name:'The Eye' , artist: ' Boombastix', text: ' у песни нет текста :(', listens: 5 , audio:'/audio/TheEye.mp3', comments:[] ,img:'https://images.unsplash.com/photo-1666419936225-416393805604' },
-    {_id:'2', name:' Dimension' , artist: '  Moonsouls', text: ' text', listens: 7 , audio:'/audio/AnotherDimension.mp3', comments:[] ,img:'https://images.unsplash.com/photo-1666353709650-f35203fba875'},
-    {_id:'3', name:'Valkyrie' , artist: ' Frainbreeze', text: ' text', listens: 2 , audio:'/audio/Valkyrie.mp3', comments:[] , img:'https://images.unsplash.com/photo-1666437257762-f693c28cb24d'},
+    {_id:'2', name:' Dimension' , artist: '  Moonsouls', text: ' у песни нет текста :(', listens: 7 , audio:'/audio/AnotherDimension.mp3', comments:[] ,img:'https://images.unsplash.com/photo-1666353709650-f35203fba875'},
+    {_id:'3', name:'Valkyrie' , artist: ' Frainbreeze', text: ' у песни нет текста :(', listens: 2 , audio:'/audio/Valkyrie.mp3', comments:[] , img:'https://images.unsplash.com/photo-1666437257762-f693c28cb24d'},
 ]
   
   const items = [
@@ -39,9 +41,12 @@ function App() {
           <div className="burger-btn" onClick={() => setActive(!menuActive)}>
             <span />
           </div>
+          <button className="custom-btn btn-4" ><Link to={'/authorization'}><span>Авторизоваться</span></Link></button>
         </nav>
+        
         <Routes >
-          <Route element={<h1 style={{margin:'90px '}}>Home</h1>} path="/" />
+          <Route element={<Authorization/>} path="/authorization"/>
+          <Route element={<Home/>} path="/" />
           <Route element={<Playlists />} path="/playlists" />
           <Route element={<Loading tracks={tracks} />} path="/tracks" />
           {/* <Route element={<Loading tracks={tracks}/>} path='/tracks/loading'/>   // just a router */}

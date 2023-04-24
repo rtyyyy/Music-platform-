@@ -1,10 +1,5 @@
 import React from "react";
 
-
-
-
-
-
 interface TrackProgressProps {
     left: number;
     right: number;
@@ -17,14 +12,14 @@ const Progress: React.FC<TrackProgressProps> =
      }) => {
         return (
             <div style={{display: 'flex'}}>
-                <input
+                <input  style={{border:'none'}}
                     type="range"
                     min={0}
                     max={right}
                     value={left}
                     onChange={onChange}
                 />
-                <div>{left} | {right}  </div>
+                <h6 style={{color:'white' , marginLeft:5}}>{left} out of {right}  </h6>
                 
             </div>
         );

@@ -19,10 +19,10 @@ function TrackItem({track,active = false}:TrackList){
     }
     return(
         
-        <Card className="wrapper"  >
+        <Card className="wrapper" style={{background:'linear-gradient(90deg, #270357 0%, #4e034b 100%)' }} >
             
             <div className="tracks__title">
-            <IconButton onClick={play}>
+            <IconButton onClick={play} style={{color:'white' , background:'none'}}>
             {active ? <Pause/> : <PlayArrow/> 
 
             }
@@ -30,19 +30,20 @@ function TrackItem({track,active = false}:TrackList){
             <img width={70} height={70}  src={track.img} />
             <div className="track__main">
         <p  className="track__name">{track.name}  </p> 
-        <p style={{color:'grey'}}>{track.artist}</p>
+        <p style={{color:'white'}}>{track.artist}</p>
         </div>
         <div className="buttons">
         <Button className="info" >
 
         {/* route to certain track by id */}
             
-            <Link to={`/tracks/loading/:${track._id}/:${track.name}/:${track.artist}/:${track.listens}/:${track.text}`} >инфо</Link>                                      
+            <Link to={`/tracks/loading/:${track._id}/:${track.name}/:${track.artist}/:${track.listens}/:${track.text}`} 
+            style={{color:'white'}} >инфо</Link>                                      
             </Button>
-            <button className="delete__button"><Delete/></button>
+            <button className="delete__button" style={{color:'white' , background:'none'}}><Delete/></button>
             </div>
         </div>
-        {!active && <div>01:00 / 02:30</div>}
+        {/* {!active && <div>01:00 / 02:30</div>} */}
         
         </Card>
         

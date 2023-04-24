@@ -16,13 +16,13 @@ function Loading({tracks}:TrackList) {
    
     return  (
     
-      <div>
+      <div className="wrap">
         
         <Grid container direction={'column'}>
         <Box p={2}>
           <div className="track__title">
-          <h3 className="title__list">список треков</h3>
-          <Button className="load__button"  > <Link to="/tracks/loading/loadTitle/" >Добавить </Link>  </Button> 
+          <h3 className="title__list">Cписок треков</h3>
+          <Button className="load__button" style={{background:'none'}} > <Link to="/tracks/loading/loadTitle/" style={{color:'white'}} >Добавить </Link>  </Button> 
           </div>
           {tracks.map( track =>
           <TrackItem
@@ -37,11 +37,19 @@ function Loading({tracks}:TrackList) {
         </Grid>
         <Player/>
       </div>
-      
-      
-      
     )
     
     
   }
   export default   Loading ;
+
+  {/* <Grid container direction="column">
+            <Box p={2}>
+                {tracks.map(track =>
+                    <TrackItem
+                        key={track._id}
+                        track={track}
+                    />
+                )}
+            </Box>
+        </Grid> */}

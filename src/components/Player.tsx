@@ -59,17 +59,17 @@ if (!active) {
 } //active может возвращать null так что я написал проверку
     return(
     <div className="player">
-        <IconButton onClick={play}>
+        <IconButton onClick={play} style={{color:'white' , background:'none'}}>
             {!pause ? <Pause/> : <PlayArrow/> 
 
             }
             </IconButton>
             <div className="track__main">
-        <p   >{active?.name}  </p> 
-        <p style={{color:'grey', marginBottom:0}}>{active?.artist}</p>
+        <p  style={{color:'white', marginBottom:0}}  >{active?.name}  </p> 
+        <p style={{color:'white', marginBottom:0}}>{active?.artist}</p>
         </div>
-        <Progress left={currentTime} right={duration} onChange={changeCurTime}/>
-        <VolumeUp style={{marginLeft:'auto'}}/>
+        <Progress  left={currentTime} right={duration} onChange={changeCurTime}  />
+        <VolumeUp style={{marginLeft:'auto' ,color:'white', }} />
         <Progress left={volume} right={100} onChange={changeVolume}/>
             </div>
         )

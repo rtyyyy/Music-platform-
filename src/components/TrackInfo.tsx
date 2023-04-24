@@ -13,26 +13,26 @@ function TrackInfo(){
     // const track : ITrack = {_id:'1', name:'The Eye' , artist: ' Boombastix', text: ' text', listens: 5 , audio:'/audio/TheEye.mp3', comments:[] ,img:'https://images.unsplash.com/photo-1666419936225-416393805604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&w=1000&q=80'}
     
     return(
-    <div style={{marginTop:70}}>
+    <div  className="trackinfo__wrapper">
         
         <div className="track__info">
         
-        <img width={200} height={200}  src={img} alt="" />
+        <img width={200} height={200}  src={img} />
             <div className="track__title">
             <h3>Исполнитель {artist} </h3>
-            <h4 style={{color:"gray"}}> Название {name} </h4>
+            <h4 > Название {name} </h4>
             <h4>Прослушиваний {listens}</h4>
             </div>
         
         </div>
         <div className="track__description">
-        <h3 >Описание/Текст</h3>
-        <h6>Текст к песне{text}</h6>
+        <h3  style={{color:'white'}}>Описание/Текст</h3>
+        <h6 style={{color:'white'}}>Текст к песне{text}</h6>
         
-        <h2 style={{marginTop:100}}>комментарии</h2>
-        <TextField label='ваше имя' fullWidth multiline />
-        <TextField label='комментарий' fullWidth multiline rows={4}/>
-        <Button>отправить</Button>
+        <h2 style={{marginTop:100, color:'white',}}>комментарии</h2>
+        <TextField style={{background:' linear-gradient(90deg, #4a0975 0%, #55075f 100%)',marginBottom:10}} label='ваше имя' fullWidth multiline />
+        <TextField style={{background:' linear-gradient(90deg, #4a0975 0%, #55075f 100%)'}}  label='комментарий' fullWidth multiline rows={4}/>
+        <Button style={{background:'#560861' , color:'white', width:100, marginTop:20}}>отправить</Button>
         <div>
             {/* {track.comments.map(comments =>
             <div>
@@ -52,29 +52,3 @@ export default TrackInfo
 
 
 
-{/* <div className="track__info">
-        <img width={200} height={200}  src={track.img} alt="" />
-            <div className="track__title">
-            <h3>Исполнитель: {track.artist} </h3>
-            <h4 style={{color:"gray"}}> Название: {track.name} </h4>
-            <h4>Прослушиваний: {track.listens}</h4>
-            </div>
-        
-        </div>
-        <div className="track__description">
-        <h3 >описание/текст</h3>
-        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium fugit eaque ducimus, ullam tempore, iure quas, eligendi quisquam voluptate non animi. Facere nobis cumque aperiam nisi consequatur amet molestias esse?</h6>
-        <h2 style={{marginTop:100}}>комментарии</h2>
-        <TextField label='ваше имя' fullWidth multiline />
-        <TextField label='комментарий' fullWidth multiline rows={4}/>
-        <Button>отправить</Button>
-        <div>
-            {track.comments.map(comment =>
-            <div>
-                <div>автор - {comment.username}</div>
-                <div>автор - {comment.text}</div>
-            </div>
-            )}
-        </div>
-        
-        </div> */}

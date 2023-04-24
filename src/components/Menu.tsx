@@ -11,23 +11,17 @@ function Menu({ header, items, active, setActive }) {
       <div className="blur" />
       <div className="menu__content" onClick={(e) => e.stopPropagation()}>
         <div className="menu__header">{header}</div>
-        {/* 
-        Браузер роутер у тебя объявлен в app, не надо его объявлять здесь, он должен быть один на проект
-        <BrowserRouter>
-          <ul>
-            {items.map((item) => (
-              <li>
-                <Link to={item.href}>{item.value}</Link>
-              </li>
-            ))}
-          </ul>
-        </BrowserRouter> */}
+        
         <ul>
           {items.map((item) => (
             <li>
-              <Link to={item.href}>{item.value}</Link>
+              <Link to={item.href}>
+              
+              {item.value} 
+              </Link>
             </li>
           ))}
+          
         </ul>
       </div>
     </div>

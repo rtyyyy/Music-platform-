@@ -9,18 +9,19 @@ const steps = ['Информация о треке', 'Загрузите обл�
 
 function StepWrapper ({activeStep, children}:StepWrapperProps)  {
     return (
-        <Container>
-            <Stepper activeStep={activeStep}>
+        <Container >
+            <Stepper activeStep={activeStep} >
                 {steps.map((step, index) =>
-                    <Step
+                    <Step 
                         key={index}
                         completed={activeStep > index}
                     >
-                        <StepLabel>{step}</StepLabel>
+                        <StepLabel ><p style={{color:'white', margin:0 }}>{step }</p></StepLabel>
+                        
                     </Step>
                 )}
             </Stepper>
-            <Grid container justifyContent="center" style={{margin: '70px 0 ', height: 270}}>
+            <Grid container justifyContent="center" style={{margin: '70px 0 ', height: 270 }}>
                 <Card style={{width: 900}}>
                     {children}
                 </Card>

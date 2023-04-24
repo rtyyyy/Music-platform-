@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import "./steps.css";
 interface SecondStepProops{
     
     setFile: Function;
@@ -11,10 +12,11 @@ function StepSecond ({ setFile, accept , children }: SecondStepProops){
         setFile(e.target.files)
     }
     return(
-        <div onClick={() => ref.current?.click()}>
+        <div onClick={() => ref.current?.click()} className="step__second">
+        
         <input type="file"
         accept={accept}
-        style={{display:'none'}}
+        style={{display:'none' }}
         ref={ref}
         onChange={onChange}
         />
