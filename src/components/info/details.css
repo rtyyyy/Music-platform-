@@ -1,0 +1,45 @@
+.track__info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20%;
+}
+
+.track__title{
+    margin-left: 100px;
+    
+}
+.track__title h3 {
+    
+    color: white;
+}
+.track__title h4 {
+    
+    color: white;
+}
+
+
+button{
+    
+    width: 80px;
+    border: none;
+    font-size: 20px;
+    border-radius: 2px;
+    
+}
+.track__description{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+track__description h3{
+    color: white;
+}
+track__description h6{
+    color: white;
+}
+.trackinfo__wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #3a075c 0%, #490652 100%) ;
+    padding-top: 70px;
+}

@@ -62,6 +62,61 @@ transform: scale(1.05)
     width: 86%;
     margin-left: 100px;
 }
+.item__name{
+margin-left: 50px;
+margin-top: 30px;
+}
+.playlist__item--wrapper{
+padding-top: 20px;
+}
+.playlist__item--wrapper div h6{
+    color: white;
+}
+.playlist__item--wrapper div h1{
+    color: white;
+}
+.playlist__item--wrapper div p{
+    color: white;
+}
+.item__title{
+    margin-left: 50px;
+}
+.item__description{
+    margin-left: 50px;
+}
+.tracks__card{
+    width: 100%;
+    height: 68vh;
+    
+    
+}
+
+.tracks__head{
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 40px 600px 500px 580px 100px;
+    
+}
+.tracks__head div p{
+    color: aliceblue;
+}
+.line__playlist{
+    width: 96%;
+    margin-left: 2%;
+    border: 1px solid rgba(165, 153, 153, 0.404);
+}
+.playlist__header{
+    display: flex;
+    background:  linear-gradient(90deg, #3e0663 0%, #50065a 100%) ;
+    padding-bottom: 20px;
+}
+.item__title{
+    margin-top: 10px;
+}
+
+
+
+
 @media (max-width: 1200px){
     .wrapper__playlist{
         height: 180vh;
@@ -85,5 +140,13 @@ transform: scale(1.05)
     .line{
         margin-left: 150px;
         width: 78%;
+    }
+    .tracks__head{
+        grid-template-columns: 30px 300px 300px 350px 80px;
+    }
+}
+@media (max-width: 960px){
+    .tracks__head{
+        grid-template-columns: 30px 200px 200px 300px 80px;
     }
 }

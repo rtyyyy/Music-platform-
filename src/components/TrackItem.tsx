@@ -27,7 +27,7 @@ function TrackItem({track,active = false}:TrackList){
 
             }
             </IconButton>
-            <img width={70} height={70}  src={track.img} />
+            <img width={70} height={70}  src={track.img} style={{borderRadius:3}} />
             <div className="track__main">
         <p  className="track__name">{track.name}  </p> 
         <p style={{color:'white'}}>{track.artist}</p>

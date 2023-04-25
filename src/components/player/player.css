@@ -1,0 +1,10 @@
+.player{
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background: linear-gradient(90deg, #2a0444 0%, #2c0331 100%) ;
+}
