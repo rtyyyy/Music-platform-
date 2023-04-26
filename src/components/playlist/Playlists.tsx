@@ -1,9 +1,8 @@
 import { Button, TextField } from "@material-ui/core";
-import React from "react";
 import "./playlist.css";
-import Playlist from "./Playlist";
 import { useState } from "react";
 import PlaylistList from "./playlist_list";
+
 
 function Playlists() {
   
@@ -21,17 +20,17 @@ function Playlists() {
   const [body, setDescription] = useState('')
  
   function addNewPlaylist(){
-    
   const newPlaylist ={
+    id: Date.now,
     title,
     body,
   }
-  
   createPlaylist([...playlist, newPlaylist])
   setTitle('')
   setDescription('')
   
   }
+  
   // localStorage.setItem ( 'items' , JSON.stringify([playlist , createPlaylist]))
   
   return  (

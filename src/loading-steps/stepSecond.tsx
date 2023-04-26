@@ -1,12 +1,7 @@
 import React, { useRef } from "react";
 import "./steps.css";
-interface SecondStepProops{
-    
-    setFile: Function;
-    accept: string;
-    children: React.ReactNode
-}
-function StepSecond ({ setFile, accept , children }: SecondStepProops){
+import { ISecondStepProops } from "../types/step";
+function StepSecond ({ setFile, accept , children }: ISecondStepProops){
     const ref = useRef<HTMLInputElement>(null)
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFile(e.target.files)

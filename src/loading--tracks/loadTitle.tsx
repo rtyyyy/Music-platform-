@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import StepWrapper from "../components/details/stepWrap";
+import StepWrapper from "../components/Details/stepWrap";
 import { Grid , Button} from "@material-ui/core";
 import StepFirst from "../loading-steps/stepFirst";
 import StepSecond from "../loading-steps/stepSecond";

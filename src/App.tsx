@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import Menu from "./components/menu/Menu";
+import Menu from "./components/Menu/Menu";
 import Loading from "./Tracks";
-import Playlists from "./components/playlist/Playlists";
+import Playlists from "./components/Playlist/Playlists";
 import "./styles/App.css";
-
-
 import Home from "./components/Home/home";
 import Authorization from "./components/Authorization/authorization";
-
 import TrackTitle from "./loading--tracks/loadTitle";
-import TrackInfo from "./components/info/TrackInfo";
+import TrackInfo from "./components/Info/TrackInfo";
 import HomePlaylistItem from "./components/Home/homePlaylistItem";
 import path from "path";
 

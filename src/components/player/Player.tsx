@@ -3,7 +3,7 @@ import { IconButton} from "@material-ui/core";
 import { Pause, PlayArrow, VolumeUp } from "@material-ui/icons";
 import "./player.css";
 import { ITrack } from "../../types/track";
-import Progress from "../details/Progress";
+import Progress from "../Details/Progress";
 import { useTypeSelector } from "../../hooks/useTypeSelector";
 import { useActions } from "../../hooks/useActions";
 let audio;

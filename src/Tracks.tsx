@@ -6,7 +6,7 @@ import { ITrack } from "./types/track";
 import TrackItem from "./components/TrackItem";
 import '../src/components/TrackItem.css'
 import { Link } from "react-router-dom";
-import Player from "./components/player/Player";
+import Player from "./components/Player/Player";
 
 interface TrackList {
   tracks:ITrack[]

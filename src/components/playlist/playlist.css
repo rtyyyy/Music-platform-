@@ -28,10 +28,10 @@
 }
 .playlist__wrapper--list{
     position: relative;
-    margin-left: 100px;
+    margin-left: 280px;
     display: grid;
-    grid-template-areas: 'a b c d e ';
-    grid-template-columns: 300px 300px 300px 300px 300px;
+    grid-template-areas: 'a b c d  ';
+    grid-template-columns: 300px 300px 300px 300px ;
 }
 .card__playlist{
     margin-top: 10px;
@@ -49,6 +49,13 @@ cursor: pointer;
 transition: all 0.5s;
 transform: scale(1.05)
 }
+.delete__button--playlist{
+    color: white;
+    margin-left: 30%;
+    background: none;
+    border: 1px solid white;
+}
+
 
 @media (max-width: 1200px){
     .playlist__wrapper--list{
